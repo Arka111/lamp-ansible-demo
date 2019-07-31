@@ -1,0 +1,11 @@
+---
+
+- name: enable apache2
+  systemd:
+    name: apache2
+    enabled: yes
+
+- name: start apache2
+  systemd:
+    state: started
+    name: apache2

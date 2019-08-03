@@ -1,0 +1,10 @@
+---
+
+- name: MariaDB | Install MariaDB Packages
+  apt: pkg={{ item }} state=present
+  with_items:
+    - mariadb-server
+    - mysql-common
+  notify:
+    - enable mariadb
+    - start mariadb

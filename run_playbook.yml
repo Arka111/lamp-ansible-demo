@@ -3,4 +3,6 @@
   connection: local
   become: true
   roles:
-    - lamp
+    - apache
+    - mysql
+    - php

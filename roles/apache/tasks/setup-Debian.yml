@@ -3,4 +3,6 @@
   apt: update_cache=yes cache_valid_time=3600
 
 - name: Install/Ensure Apache is installed
-  apt: "name={{ apache_packages }} state={{ apache_packages_state }}"
+  apt: 
+    name: "{{ apache_packages }}"
+    state: "{{ apache_packages_state }}"

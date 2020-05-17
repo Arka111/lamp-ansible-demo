@@ -1,0 +1,8 @@
+---
+apache_service: apache2
+apache_daemon: apache2
+apache_daemon_path: /usr/sbin/
+
+__apache_packages:
+  - apache2
+  - apache2-utils

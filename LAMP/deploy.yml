@@ -1,9 +1,0 @@
----
-
-- hosts: 127.0.0.1
-  connection: local
-  become: true
-  become_user: root
-  roles:
-    - apache2
-	- mariadb

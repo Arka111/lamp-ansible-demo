@@ -1,0 +1,17 @@
+---
+- name: Include OS-specific variables.
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Define mysql_packages
+  set_fact:
+    mysql_packages: "{{ __mysql_packages | list }}"
+  when: mysql_packages is not defined
+
+- name: Setup MySQL
+  include_tasks: "setup-{{ ansible_os_family }}.yml"
+
+- name: Get installed version of MySQL.
+  command: "{{ mysql_daemon_path }}{{ mysql_daemon }} --version"
+  changed_when: false
+  check_mode: false
+  register: _mysql_version

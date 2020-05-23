@@ -1,0 +1,3 @@
+---
+# 'present' to make sure it is installed, 'latest' to upgrade or switch versions
+php_packages_state: present

@@ -14,7 +14,7 @@ Automated deployment of a LAMP server via Ansible.
 ## Guide
 
 ```bash
-git clone https://github.com/xuhang57/lamp-ansible.git
+git clone https://github.com/Arka111/lamp-ansible.git
 ansible-playbook run_playbook.yml
 ```
 

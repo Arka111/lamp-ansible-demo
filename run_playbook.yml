@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: prod
   become: true
   roles:
     - apache
